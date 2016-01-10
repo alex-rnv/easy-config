@@ -1,8 +1,7 @@
-package com.alexrnv.easyconf.thirdparty;
+package com.alexrnv.easyconf;
 
-import com.alexrnv.easyconf.Module;
-import com.amazonaws.regions.Regions;
 import com.alexrnv.easyconf.entity.ValueResolver;
+import com.amazonaws.regions.Regions;
 
 /**
  * This is example of externally configurable module to enhance basic capabilities.

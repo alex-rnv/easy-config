@@ -1,8 +1,6 @@
 package com.alexrnv.easyconf;
 
 
-import com.alexrnv.easyconf.thirdparty.AwsModule;
-
 import java.io.IOException;
 
 /**
@@ -13,7 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
         Configuration configuration = new Configuration();
-        configuration.addModule(new AwsModule());
         configuration.init();
 
         for(String arg : args) {

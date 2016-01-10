@@ -1,7 +1,6 @@
 package com.alexrnv.easyconf;
 
 import com.alexrnv.easyconf.entity.Property;
-import com.alexrnv.easyconf.thirdparty.AwsModule;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
@@ -68,7 +67,7 @@ public class ConfigurationTest {
     @Ignore
     public void regressionTest() throws IOException {
         Configuration configuration = new Configuration();
-        configuration.addModule(new AwsModule());
+        configuration.addModule(new Module("test"));
         configuration.init();
 
         configuration.addSource("file://" + path.toString());

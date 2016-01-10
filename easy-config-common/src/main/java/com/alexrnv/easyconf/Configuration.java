@@ -72,7 +72,7 @@ public class Configuration {
             throw new IllegalStateException("Not allowed to add modules after initialization");
         }
         LOG.debug("Module added " + module.getName());
-        module.resolversMap.forEach((k,v) -> propertyFactory.addResolver(k,v));
+        module.resolversMap.forEach(propertyFactory::addResolver);
     }
 
     public String getString(String name) {
