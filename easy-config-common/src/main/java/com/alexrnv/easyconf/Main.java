@@ -11,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         Configuration configuration = new Configuration();
+        configuration.addModule(new Module("fake"));
         configuration.init();
 
         for(String arg : args) {
@@ -22,12 +23,9 @@ public class Main {
             }
         }
 
-        //as per task requirements, output should be sorted.
-        //there is not need to keep properties sorted in real case, so we sort them here.
         configuration.getAllProperties().stream()
-                .sorted((p1, p2) -> String.CASE_INSENSITIVE_ORDER.compare(p1.getName(), p2.getName()))
                 .forEach(p -> System.out.println(
-                        p.getName() + ", " + p.getValue().getClass().getName() + ", " + p.getValue())
+                                p.getName() + ", " + p.getValue().getClass().getName() + ", " + p.getValue())
                 );
     }
 }
